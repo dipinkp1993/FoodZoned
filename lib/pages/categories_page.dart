@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import './dummy_data.dart';
-import './category_item.dart';
+import '../widgets/category_item.dart';
+import '../dummy_data.dart';
 
 class CategoriesPage extends StatelessWidget {
   //This page controls entire content in the device of this app

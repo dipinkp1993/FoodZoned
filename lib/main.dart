@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import './categories_page.dart';
+import './category_recipe_page.dart';
 
 void main() => runApp(MyApp());
 
@@ -22,6 +23,9 @@ class MyApp extends StatelessWidget {
             ),
       ),
       home: CategoriesPage(),
+      routes: {
+        '/category-recipes': (ctx) => CategoryRecipePage(),
+      },
     );
   }
 }

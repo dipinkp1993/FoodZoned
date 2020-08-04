@@ -4,7 +4,7 @@ class Categories {
   final String id;
   final String title;
   final Color color;
-  Categories({
+  const Categories({
     @required this.id,
     @required this.title,
     this.color = Colors.red,

@@ -23,8 +23,9 @@ class MyApp extends StatelessWidget {
             ),
       ),
       home: CategoriesPage(),
+      initialRoute: '/',
       routes: {
-        '/category-recipes': (ctx) => CategoryRecipePage(),
+        CategoryRecipePage.routeName: (ctx) => CategoryRecipePage(),
       },
     );
   }

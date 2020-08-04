@@ -8,7 +8,7 @@ class CategoryItem extends StatelessWidget {
   CategoryItem(this.id, this.title, this.color);
 
   void selectCategory(BuildContext ctx) {
-    Navigator.of(ctx).pushNamed('/category-recipes', arguments: {
+    Navigator.of(ctx).pushNamed(CategoryRecipePage.routeName, arguments: {
       'id': id,
       'title': title,
     });

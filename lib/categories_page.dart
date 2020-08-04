@@ -8,9 +8,15 @@ class CategoriesPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('FoodZoned'),
+        title: Text(
+          'FoodZoned',
+          style: TextStyle(
+            color: Colors.white,
+          ),
+        ),
       ),
       body: GridView(
+        padding: const EdgeInsets.all(25),
         children: DUMMY_CATEGORIES
             .map((catItem) => CategoryItem(catItem.title, catItem.color))
             .toList(),

@@ -9,7 +9,17 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'FoodMate',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.orange,
+        accentColor: Colors.cyan,
+        canvasColor: Color.fromRGBO(255, 255, 229, 1),
+        fontFamily: 'Raleway',
+        textTheme: ThemeData.light().textTheme.copyWith(
+              headline6: TextStyle(
+                fontSize: 20,
+                fontFamily: 'RobotoCondensed',
+                fontWeight: FontWeight.bold,
+              ),
+            ),
       ),
       home: CategoriesPage(),
     );

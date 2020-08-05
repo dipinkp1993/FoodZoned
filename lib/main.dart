@@ -26,8 +26,10 @@ class MyApp extends StatelessWidget {
       home: CategoriesPage(),
       routes: {
         CategoryRecipePage.routeName: (ctx) => CategoryRecipePage(),
-        MealRecipeDetail.routeName:(ctx)=>MealRecipeDetail(),
-
+        MealRecipeDetail.routeName: (ctx) => MealRecipeDetail(),
+      },
+      onUnknownRoute: (settings) {
+        return MaterialPageRoute(builder: (ctx) => CategoriesPage());
       },
     );
   }

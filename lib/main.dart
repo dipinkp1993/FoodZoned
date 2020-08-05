@@ -3,6 +3,7 @@ import './pages/categories_page.dart';
 import './pages/category_recipe_page.dart';
 import './pages/meal_recipe_page.dart';
 import './pages/tabs_page.dart';
+import './pages/tabs_page_bottom.dart';
 
 void main() => runApp(MyApp());
 
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
               ),
             ),
       ),
-      home: TabsPage(),
+      home: TabsPaged(),
       routes: {
         CategoryRecipePage.routeName: (ctx) => CategoryRecipePage(),
         MealRecipeDetail.routeName: (ctx) => MealRecipeDetail(),

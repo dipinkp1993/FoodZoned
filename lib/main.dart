@@ -4,6 +4,7 @@ import './pages/category_recipe_page.dart';
 import './pages/meal_recipe_page.dart';
 import './pages/tabs_page.dart';
 import './pages/tabs_page_bottom.dart';
+import './pages/filter_page.dart';
 
 void main() => runApp(MyApp());
 
@@ -29,6 +30,7 @@ class MyApp extends StatelessWidget {
       routes: {
         CategoryRecipePage.routeName: (ctx) => CategoryRecipePage(),
         MealRecipeDetail.routeName: (ctx) => MealRecipeDetail(),
+        FilterPage.routeName: (ctx) => FilterPage(),
       },
       onUnknownRoute: (settings) {
         return MaterialPageRoute(builder: (ctx) => CategoriesPage());

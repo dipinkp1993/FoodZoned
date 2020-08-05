@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import './pages/categories_page.dart';
 import './pages/category_recipe_page.dart';
 import './pages/meal_recipe_page.dart';
+import './pages/tabs_page.dart';
 
 void main() => runApp(MyApp());
 
@@ -11,7 +12,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'FoodMate',
       theme: ThemeData(
-        primarySwatch: Colors.orange,
+        primarySwatch: Colors.red,
         accentColor: Colors.cyan,
         canvasColor: Color.fromRGBO(255, 255, 229, 1),
         fontFamily: 'Raleway',
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
               ),
             ),
       ),
-      home: CategoriesPage(),
+      home: TabsPage(),
       routes: {
         CategoryRecipePage.routeName: (ctx) => CategoryRecipePage(),
         MealRecipeDetail.routeName: (ctx) => MealRecipeDetail(),

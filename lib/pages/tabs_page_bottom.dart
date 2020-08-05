@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../pages/categories_page.dart';
 import '../pages/favourites_page.dart';
+import '../widgets/main_drawer.dart';
 
 class TabsPaged extends StatefulWidget {
   @override
@@ -31,6 +32,7 @@ class _TabsPagedState extends State<TabsPaged> {
       appBar: AppBar(
         title: Text(_pages[_selectedPageIndex]['title']),
       ),
+      drawer: MainDrawer(),
       body: _pages[_selectedPageIndex]['page'],
       bottomNavigationBar: BottomNavigationBar(
         unselectedItemColor: Colors.white,

@@ -79,13 +79,26 @@ class MealRecipeDetail extends StatelessWidget {
                   leading: CircleAvatar(
                     child: Text('# ${(index + 1)}'),
                   ),
-                  title:Text(mealsData.steps[index],style: TextStyle(fontWeight: FontWeight.w800),) ,
+                  title: Text(
+                    mealsData.steps[index],
+                    style: TextStyle(fontWeight: FontWeight.w800),
+                  ),
                 ),
                 itemCount: mealsData.steps.length,
               ),
             ),
           ],
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.of(context).pop(mealId);
+        },
+        child: Icon(
+          Icons.delete_sweep,
+          color: Colors.white,
+        ),
+        backgroundColor: Colors.purple,
       ),
     );
   }

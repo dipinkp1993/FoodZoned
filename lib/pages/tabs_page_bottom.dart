@@ -16,7 +16,7 @@ class _TabsPagedState extends State<TabsPaged> {
     },
     {
       'page': FavouritesPage(),
-      'title': 'Categories',
+      'title': 'Your Favourites',
     },
   ];
   int _selectedPageIndex = 0;

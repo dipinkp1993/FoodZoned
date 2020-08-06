@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../widgets/main_drawer.dart';
 
 class FilterPage extends StatelessWidget {
   static const routeName = '/filter';
@@ -8,6 +9,7 @@ class FilterPage extends StatelessWidget {
       appBar: AppBar(
         title: Text("Filters"),
       ),
+      drawer: MainDrawer(),
       body: Center(
         child: Text("Center Page"),
       ),

@@ -17,6 +17,7 @@ class MealRecipeDetail extends StatelessWidget {
   Widget build(BuildContext context) {
     final mealId = ModalRoute.of(context).settings.arguments as String;
     final mealsData = DUMMY_MEALS.firstWhere((meals) => meals.id == mealId);
+
     return Scaffold(
       appBar: AppBar(
         title: Text(mealsData.title),

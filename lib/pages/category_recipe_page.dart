@@ -45,20 +45,32 @@ class _CategoryRecipePageState extends State<CategoryRecipePage> {
       appBar: AppBar(
         title: Text(catTitle),
       ),
-      body: ListView.builder(
-        itemBuilder: (ctx, index) {
-          return MealItem(
-            id: displayedMeals[index].id,
-            title: displayedMeals[index].title,
-            imageUrl: displayedMeals[index].imageUrl,
-            duration: displayedMeals[index].duration,
-            complexity: displayedMeals[index].complexity,
-            affordability: displayedMeals[index].affordability,
-            removeItem: _removeMeal,
-          );
-        },
-        itemCount: displayedMeals.length,
-      ),
+      body: displayedMeals.length > 0
+          ? ListView.builder(
+              itemBuilder: (ctx, index) {
+                return MealItem(
+                  id: displayedMeals[index].id,
+                  title: displayedMeals[index].title,
+                  imageUrl: displayedMeals[index].imageUrl,
+                  duration: displayedMeals[index].duration,
+                  complexity: displayedMeals[index].complexity,
+                  affordability: displayedMeals[index].affordability,
+                  removeItem: _removeMeal,
+                );
+              },
+              itemCount: displayedMeals.length,
+            )
+          : Center(
+              child: Text(
+                "No Recipe avilable",
+                style: TextStyle(
+                  color: Colors.red,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 36,
+                  fontStyle: FontStyle.italic,
+                ),
+              ),
+            ),
     );
   }
 }
